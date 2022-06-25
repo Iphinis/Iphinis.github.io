@@ -5,6 +5,8 @@ body {
   background: linear-gradient(45deg, #57003f 0%,#f57453 100%);
   font-family: Ubuntu;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 ::-webkit-scrollbar {
