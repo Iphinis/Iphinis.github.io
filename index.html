@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Iphinis' Terminal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <link rel="icon" href="./assets/icon.ico">
+  </head>
+  <body>
+    <main id="container">
+      <div id="terminal">
+        <section id="terminal__bar">
+          <div id="bar__buttons">
+            <button class="bar__button" id="bar__button--exit" onclick="exit()">&#10005;</button>
+            <button class="bar__button" onclick="minimize()">&#9472;</button>
+            <button class="bar__button" onclick="expand()">&#9723;</button>
+          </div>
+          <p id="bar__user">iphinis@ubuntu: ~</p>
+        </section>
+        <section id="terminal__body">
+          <span id="terminal__prompt--cursor"></span>
+          <div class="terminal__prompt">
+            <span class="terminal__prompt--user">iphinis@ubuntu:</span>
+            <span class="terminal__prompt--location">~</span>
+            <span class="terminal__prompt--bling">$</span>
+            <span class="terminal__prompt--text"></span>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="./obfuscated.js" type="text/javascript"></script>
+  </body>
+</html>
