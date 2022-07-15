@@ -10,13 +10,13 @@
     <link rel="icon" href="./assets/icon.ico">
   </head>
   <body>
-    <main id="container">
+    <main id="container" tabindex="-1">
       <div id="terminal">
         <section id="terminal__bar">
           <div id="bar__buttons">
-            <button class="bar__button" id="bar__button--exit" onclick="exit()" tabindex="-1">&#10005;</button>
-            <button class="bar__button" onclick="minimize()" tabindex="-1">&#9472;</button>
-            <button class="bar__button" onclick="expand()" tabindex="-1">&#9723;</button>
+            <button class="bar__button" id="bar__button--exit" onclick="exit()" onfocus=blur()>&#10005;</button>
+            <button class="bar__button" onclick="minimize()" onfocus=blur()>&#9472;</button>
+            <button class="bar__button" onclick="expand()" onfocus=blur()>&#9723;</button>
           </div>
           <p id="bar__user">iphinis@ubuntu: ~</p>
         </section>
