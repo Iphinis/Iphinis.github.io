@@ -9,6 +9,12 @@ body {
   padding: 0;
 }
 
+::selection {
+  background: white;
+  color: black;
+  text-shadow: none;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -51,6 +57,7 @@ a:hover {
 }
 
 #terminal {
+  position: absolute;
   width: 70vw;
   height: 65vh;
   box-shadow: 2px 4px 10px rgba(0,0,0,0.5);
@@ -124,8 +131,14 @@ a:hover {
 .terminal__prompt--user {
   color: #8be334;
 }
+.terminal__prompt--user::selection {
+  color: #741ccb;
+}
 .terminal__prompt--location {
   color: #72a0d0;
+}
+.terminal__prompt--location::selection {
+  color: #8d5f2f;
 }
 .terminal__prompt--bling {
   color: #dddddd;
@@ -135,7 +148,12 @@ a:hover {
   height: 17px;
   width: 100%;
   margin-left: 9px;
+  background: transparent;
+  border: 0 transparent;
   color: white;
+}
+.terminal__prompt--text:focus {
+  outline: none;
 }
 .terminal__prompt--response {
   display: block;
@@ -151,6 +169,15 @@ a:hover {
   margin-left: 145px;
   color: white;
   animation: blink 1200ms linear infinite;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 @keyframes blink {
